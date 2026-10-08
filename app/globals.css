@@ -161,3 +161,105 @@
     @apply bg-background text-foreground;
   }
 }
+
+:root {
+  --cream: #f1ecdf;
+  --ink: #24231f;
+  --muted-ink: #767269;
+  --line: #d8d1c2;
+  --accent: #b46b45;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.calling-card-page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 28px;
+  background: var(--cream);
+}
+
+.calling-card {
+  width: min(100%, 900px);
+  min-height: min(650px, calc(100svh - 56px));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+  padding: clamp(28px, 5vw, 64px);
+  border: 1px solid var(--line);
+  background: rgba(246, 242, 232, 0.76);
+  position: relative;
+  z-index: 1;
+}
+
+.card-topline, .contact-link, .discipline {
+  display: flex;
+  align-items: center;
+}
+
+.card-topline {
+  justify-content: space-between;
+  color: var(--muted-ink);
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.card-index { color: var(--accent); }
+
+.card-intro { max-width: 760px; }
+.eyebrow, .section-label {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.card-intro h1 {
+  margin: 18px 0 20px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(58px, 10vw, 126px);
+  font-weight: 400;
+  letter-spacing: -.065em;
+  line-height: .86;
+}
+
+.role-list {
+  max-width: 640px;
+  color: var(--muted-ink);
+  font-size: clamp(13px, 1.5vw, 16px);
+  line-height: 1.7;
+}
+
+.role-list span { color: var(--accent); padding: 0 6px; }
+.card-divider { height: 1px; background: var(--line); }
+.card-lower { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(180px, .65fr); gap: 48px; }
+.statement-block { max-width: 510px; }
+.statement { margin-top: 16px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(18px, 2.2vw, 25px); line-height: 1.28; letter-spacing: -.02em; }
+.disciplines { display: flex; flex-direction: column; gap: 13px; align-self: end; }
+.discipline { gap: 14px; color: var(--muted-ink); font-size: 12px; }
+.discipline span:first-child { color: var(--accent); font-size: 10px; }
+.contact-link { gap: 12px; width: fit-content; color: var(--ink); font-size: 12px; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 7px; transition: color .2s ease, border-color .2s ease; }
+.contact-link:hover, .contact-link:focus-visible { color: var(--accent); border-color: var(--accent); }
+.contact-icon { display: grid; place-items: center; color: var(--accent); }
+.contact-icon svg, .contact-arrow { width: 14px; height: 14px; }
+.contact-arrow { margin-left: 4px; }
+.ambient-mark { position: absolute; width: 320px; height: 320px; border: 1px solid rgba(180, 107, 69, .18); border-radius: 50%; }
+.ambient-mark::after { content: ''; position: absolute; inset: 28px; border: 1px solid rgba(180, 107, 69, .13); border-radius: 50%; }
+.ambient-mark-top { top: -220px; right: -120px; }
+.ambient-mark-bottom { bottom: -240px; left: -150px; }
+
+@media (max-width: 640px) {
+  .calling-card-page { padding: 14px; }
+  .calling-card { min-height: calc(100svh - 28px); gap: 34px; padding: 28px 22px; }
+  .card-lower { grid-template-columns: 1fr; gap: 30px; }
+  .disciplines { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+}

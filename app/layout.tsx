@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Derick Ortiz — Mathematics, Economics & Data',
+  description: 'A personal calling card for Derick Ortiz, focused on mathematics, economics, data analysis, and data modeling.',
   generator: 'v0.app',
   icons: {
     icon: [
