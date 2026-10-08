@@ -8,7 +8,6 @@ export default function Page() {
 
       <section className="calling-card" aria-labelledby="name-heading">
         <div className="card-topline">
-          <span className="card-label">Personal calling card</span>
           <span className="card-index" aria-hidden="true">01</span>
         </div>
 
