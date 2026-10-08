@@ -1,7 +1,5 @@
 import { ArrowUpRight, Mail } from 'lucide-react'
 
-const disciplines = ['Mathematics', 'Economics', 'Data Analysis', 'Data Modeling']
-
 export default function Page() {
   return (
     <main className="calling-card-page">
@@ -30,14 +28,6 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="disciplines" aria-label="Areas of focus">
-            {disciplines.map((discipline, index) => (
-              <div className="discipline" key={discipline}>
-                <span>0{index + 1}</span>
-                <span>{discipline}</span>
-              </div>
-            ))}
-          </div>
         </div>
 
         <a className="contact-link" href="mailto:derick.ortiz1206@gmail.com">

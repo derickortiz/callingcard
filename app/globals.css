@@ -241,12 +241,9 @@ body {
 
 .role-list span { color: var(--accent); padding: 0 6px; }
 .card-divider { height: 1px; background: var(--line); }
-.card-lower { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(180px, .65fr); gap: 48px; }
-.statement-block { max-width: 510px; }
+.card-lower { display: flex; }
+.statement-block { max-width: 680px; }
 .statement { margin-top: 16px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(18px, 2.2vw, 25px); line-height: 1.28; letter-spacing: -.02em; }
-.disciplines { display: flex; flex-direction: column; gap: 13px; align-self: end; }
-.discipline { gap: 14px; color: var(--muted-ink); font-size: 12px; }
-.discipline span:first-child { color: var(--accent); font-size: 10px; }
 .contact-link { gap: 12px; width: fit-content; color: var(--ink); font-size: 12px; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 7px; transition: color .2s ease, border-color .2s ease; }
 .contact-link:hover, .contact-link:focus-visible { color: var(--accent); border-color: var(--accent); }
 .contact-icon { display: grid; place-items: center; color: var(--accent); }
